@@ -1,6 +1,5 @@
 target/
 .idea/
-
-.idea/
 *.iml
 *.iws
+config.properties

@@ -85,7 +85,7 @@ public class Item {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    static class Builder {
+    public static class Builder {
         @JsonProperty("id")
         private String id;
         @JsonProperty("title")

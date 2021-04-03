@@ -1,4 +1,4 @@
-package db;
+package com.laioffer.jupiter.db;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -12,6 +12,9 @@ public class MySQLDBUtil {
         Properties prop = new Properties();
         String propFileName = "config.properties";
 
+        //MySQLDBUtil.class.getClassLoader().getResourceAsStream(propFileName) 使用了相对路径
+        // getResourceAsStream 相对路径到 resource folder
+        // .class  runtime 再找一下 这个类的定义位置 因为compare完成以后就不知道定义了
         InputStream inputStream = MySQLDBUtil.class.getClassLoader().getResourceAsStream(propFileName);
         prop.load(inputStream);
 
